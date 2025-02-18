@@ -1,0 +1,77 @@
+    #include"pilanela.h"
+    #include<iostream>
+
+    void cambiar(Pila<int> &original, int a, int b)
+    {
+        int actual;
+        bool cambio=false;
+        bool verificar=true;
+        Pila<int> aux,final;
+        while(original.tama()&& verificar)
+        {
+            actual=original.tope();
+            original.pop();
+            
+            if(a==actual&& !cambio)
+            {
+                aux.push(actual);
+                cambio=true;
+            }
+            else if(b==actual&& cambio)
+            {
+                aux.push(actual);
+                verificar=false;
+            }
+            else if(cambio)
+            {
+                aux.push(actual);
+            }
+            else
+            {
+                final.push(actual);
+            }
+
+        }
+        while(aux.tama())
+        {
+            actual=aux.tope();
+            aux.pop();
+            final.push(actual);
+        }
+        while(original.tama())
+        {
+            actual=original.tope();
+            original.pop();
+
+            final.push(actual);
+        }
+        
+
+    }
+
+    /*int main() 
+    {
+        Pila<int> pila;
+    
+        // Llenamos la pila con algunos valores
+        pila.push(1);
+        pila.push(2);
+        pila.push(3);
+        pila.push(4);
+        pila.push(5);
+    
+        std::cout << "Pila original (de arriba hacia abajo): 5 4 3 2 1" << std::endl;
+    
+        // Llamamos a la función cambiar
+        cambiar(pila, 3, 5);
+    
+        // Mostramos la pila después de cambiar
+        while (pila.tama()) {
+            std::cout << pila.tope() << " ";
+            pila.pop();
+        }
+        std::cout << std::endl;
+    
+        return 0;
+    }
+    */ 
