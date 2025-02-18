@@ -1,0 +1,99 @@
+#include"pilanela.h"
+#include<iostream>
+
+//Cabecera: void avanzarcursor(Pila<char> &original, Pila<char> &aux)
+//Precondicion: Recibe dos punteros a dos pilas
+//Postcondicion: Avanzar el cursor una posicion 
+void avanzarcursor(Pila<char> &original, Pila<char> &aux)
+{
+    if(!original.vacia())
+    {
+        original.push(aux.tope());
+        aux.pop();
+    }
+}
+
+//Cabecera: void retrocedercursor(Pila<char> &original, Pila<char> &aux)
+//Precondicion: Recibe dos punteros a dos pilas
+//Postcondicion: Retrocede el cursor una posicion 
+void retrocedercursor(Pila<char> &original, Pila<char> &aux)
+{
+    if(!original.vacia())
+    {
+        aux.push(original.tope());
+        original.pop();
+    }
+}
+
+
+//Cabecera: void final(Pila<char> &original, Pila<char> &aux)
+//Precondicion: Recibe dos punteros a dos pilas
+//Postcondicion: Avanza hasta el final 
+void final(Pila<char> &original, Pila<char> &aux)
+{
+    while(aux.tama())
+    {
+        original.push(aux.tope());
+        aux.pop();
+    }
+
+}
+
+//Cabecera: void principio(Pila<char> &original, Pila<char> &aux)
+//Precondicion: Recibe dos punteros a dos pilas
+//Postcondicion: Avanza hasta el principio 
+void final(Pila<char> &original, Pila<char> &aux)
+{
+    while(aux.tama())
+    {
+        aux.push(original.tope());
+        original.pop();
+    }
+    
+}
+
+
+//Cabecera: void borrarposicion(Pila<char> &original, Pila<char> &aux)
+//Precondicion: Recibe dos punteros a dos pilas
+//Postcondicion: Borra la posicion del caracter
+void borrarposicion(Pila<char> &original, Pila<char> &aux)
+{
+    if(!aux.vacia())
+    {
+        aux.pop();
+    }
+    
+}
+
+//Cabecera: void borraranterior(Pila<char> &original, Pila<char> &aux)
+//Precondicion: Recibe dos punteros a dos pilas
+//Postcondicion: Borra la posicion anterior
+void borraranterior(Pila<char> &original, Pila<char> &aux)
+{
+    if(!original.vacia())
+    {
+        original.pop();
+    }
+    
+}
+
+//Cabecera: void intsertarposicion(Pila<char> &original, Pila<char> &aux)
+//Precondicion: Recibe dos punteros a dos pilas
+//Postcondicion: Insertar un caracter en la posicion del cursor
+void insertarposicion(Pila<char> &original, Pila<char> &aux)
+{
+    char c;
+    std::cin>>c;
+    aux.push(c);
+}
+
+//Cabecera: void sobreescribir(Pila<char> &original, Pila<char> &aux)
+//Precondicion: Recibe dos punteros a dos pilas
+//Postcondicion: Sobreescribir 
+void sobreescribir(Pila<char> &original, Pila<char> &aux)
+{
+    char c;
+    std::cin>>c;
+    original.pop();
+    original.push(c);
+}
