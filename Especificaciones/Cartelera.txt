@@ -1,0 +1,22 @@
+ESPECIFICACION TAD CARTELERA
+Es una secuencia de salas que cada una ofrece unos espectáculos determinados con un numero mayor igual a 0.
+
+Operaciones:
+-Cartelera()
+Postcondición: Se crea una cartelera vacia.
+
+-void NuevaSala(sala s)
+Precondición: Que exista una sala s 
+Postcondición: Añadir la sala s a la cartelera correctamente.
+
+-void NuevoEspectaculo(sala s, espectáculo e)
+Precondición: Que exista esa sala ya en la cartelera y exista ese espectáculo.
+Postcondición: Que se añada correctamente ese espectáculo a la sala s.
+
+-void EliminarSala(sala s)
+Precondición: Que exista la sala en el tad cartelera.
+Postcondición: Eliminar correctamente la sala s con sus respectivos espectáculos.
+
+-void EliminarEspectaculo(sala s, espectáculo e)
+Precondición: Que exista la sala s en cartelera y que en la sala s exista un espectáculo e.
+Postcondición: Eliminar correctamente el espectáculo e de la sala s.
