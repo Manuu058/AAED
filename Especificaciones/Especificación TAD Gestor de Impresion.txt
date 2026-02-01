@@ -1,0 +1,22 @@
+Especificación TAD Gestor de Impresión
+Un gestor de impresión es una secuencia de usuarios que desean imprimir trabajos, primero se imprime los urgentes y luego los no urgentes, cada turno es un trabajo y pasa al siguiente turno.
+
+Operaciones:
+-GestorImpresion::GestorImpresion(int nusuarios)
+Postcondición: Crear un Gestor de impresión para n usuarios.
+
+-void GestorImpresion::NuevoTrabajo(usuario u, trabajo t)
+Precondición: Que exista un usuario y un trabajo con una urgencia determinada a asignar.
+Postcondición: Que se asigne al usuario el trabajo correctamente.
+
+-void GestorImpresion::EliminarTrabajo(usuario u)
+Precondición: Exista el usuario con algún trabajo que imprimir.
+Postcondición: Eliminar el trabajo impreso adecuado.
+
+-void GestorImpresion::CancelarTrabajos(usuario u)
+Precondición: Exista un usuario con trabajos que imprimir.
+Postcondición: Cancelar todos los trabajos del usuario.
+
+-GestorImpresion::~GestorImpresion()
+Precondición: Exista un gestor de impresión.
+Postcondición: Elimine correctamente el gestor de impresión.

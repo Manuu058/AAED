@@ -1,0 +1,33 @@
+Especificación TAD TREN
+
+Un tren es una secuencia de elementos de tipo vagón en el que tomamos uno como referencia para realizar las operaciones 
+
+Operaciones: 
+
+-Tren::Tren()
+Postcondición: Se crea un tren vacío.
+
+-void Tren::Izquierda()
+Precondición: A la derecha del vagón activo existe vagones.
+Postcondición: Se desplazan todos los vagones uno a la derecha.
+
+-void Tren::Derecha()
+Precondición: A la izquierda del vagón activo existe vagones.
+Postcondición: Se desplazan todos los vagones uno a la izquierda.
+
+-void Tren::EliminarActivo()
+Precondición: Existe un vagón activo.
+Postcondición: Se elimina el vagón activo.
+
+-void Tren::InsertarActivo()
+Precondición: Debe existir un vagón v.
+Postcondición: Se asigna un nuevo vagón activo v.
+
+-Vagón Tren::ObservarActivo()
+Precondición: Existe un vagón activo en el tren.
+Postcondición: Devuelve el vagón activo.
+
+-Bool Tren::Vacio()
+Precondición: Existe un tren.
+Postcondición: Devuelve verdadero si el tren esta vacío.
+

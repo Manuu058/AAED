@@ -1,0 +1,26 @@
+Especificación TAD ESCALONADA
+Se trata de crear una secuencia de salas en las cuales cada una ofrece una serie de espectáculos.
+
+Operaciones:
+-Cartelera::Cartelera()
+Postcondición: Se crea una cartelera vacía. 
+
+-void Cartelera::NuevaSala(sala s)
+Precondición: Existe una sala llamada s
+Postcondición: Se añade la sala a la cartelera correctamente.
+
+-void Cartelera::NuevoEspectaculo(sala s, espectáculo e)
+Precondición: Existe una sala llamada s y un espectáculo llamado e.
+Postcondición: Se añade a la sala el espectáculo correctamente.
+
+-void Cartelera::EliminarSala(sala s)
+Precondición: Existe una sala llamada s
+Postcondición: Se elimina la sala a la cartelera correctamente.
+
+-void Cartelera::NuevoEspectaculo(sala s, espectáculo e)
+Precondición: Existe una sala llamada s y un espectáculo llamado e.
+Postcondición: Se elimina a la sala el espectáculo correctamente.
+
+-Cartelera::~Cartelera()
+Precondición: Existe un tad cartelera.
+Postcondición: Se elimina correctamente la cartelera.
